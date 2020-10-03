@@ -1,2 +1,2 @@
 # vscode
- configuration of vacode
+ configuration of visual studio code
