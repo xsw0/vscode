@@ -6,9 +6,9 @@
             "label": "clang++ build active file",
             "command": "/usr/bin/clang++",
             "args": [
-                "-std=c18",
+                "-std=c17",
                 "-std=c++2a",
-                "-stdlib=libc++",
+                // "-stdlib=libc++",
                 "-g",
                 "${workspaceFolder}/*.cpp",
                 "-o",

@@ -6,7 +6,7 @@
             "label": "clang build active file",
             "command": "/usr/bin/clang",
             "args": [
-                "-std=c18",
+                "-std=c17",
                 "-g",
                 "${workspaceFolder}/*.c",
                 "-o",
