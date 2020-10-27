@@ -5,7 +5,7 @@
             "name": "clang - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/${workspaceFolderBasename}",
+            "program": "${workspaceFolder}/.macOS/${workspaceFolderBasename}.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
