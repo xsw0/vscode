@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "make directory",
+            "command": "mkdir",
+            "args": [
+                "-p",
+                "${workspaceFolder}/.macOS"
+            ],
+            "group": "build"
+        },
+        {
+            "type": "shell",
+            "label": "clang++ build active file",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c17",
+                "-std=c++2a",
+                // "-stdlib=libc++",
+                "-g",
+                "${workspaceFolder}/*.cpp",
+                "-o",
+                "${workspaceFolder}/.macOS/${workspaceFolderBasename}.out"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "make directory"
+            ]
+        }
+    ]
+}
