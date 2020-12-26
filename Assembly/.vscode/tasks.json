@@ -3,13 +3,29 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "clang build active file",
+            "label": "Assembly",
             "command": "/usr/bin/clang",
             "args": [
                 "-std=c17",
                 "-O1",
                 "-S",
-                "${workspaceFolder}/*.c"
+                "${workspaceFolder}/*.c",
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "clang build active file",
+            "command": "/usr/bin/clang",
+            "args": [
+                "-o",
+                "${workspaceFolderBasename}.out",
+                "${workspaceFolder}/*.s"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -20,7 +36,10 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "dependsOn": [
+                "Assembly"
+            ]
         }
     ]
 }

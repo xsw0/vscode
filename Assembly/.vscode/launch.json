@@ -5,7 +5,7 @@
             "name": "Launch",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/.macOS/${workspaceFolderBasename}.out",
+            "program": "${workspaceFolder}/${workspaceFolderBasename}.out",
             "args": [],
             "cwd": "${workspaceFolder}"
         }
